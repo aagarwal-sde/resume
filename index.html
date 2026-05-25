@@ -208,6 +208,72 @@
       border-radius: 8px;
       flex-shrink: 0;
     }
+
+    /* Tablet: reduce padding, bump font size, collapse to single column */
+    @media (max-width: 860px) {
+      body {
+        padding: 16px 8px;
+        font-size: 15px;
+      }
+
+      .page {
+        padding: 32px 24px;
+      }
+
+      .body {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .sidebar {
+        margin-top: 16px;
+      }
+    }
+
+    /* Phone: tighter padding, stacked header, 16px base per mobile standard */
+    @media (max-width: 640px) {
+      body {
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      .page {
+        padding: 20px 16px;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .header-photo {
+        height: 90px;
+        margin-bottom: 12px;
+        order: -1;
+      }
+
+      .header-left .contact {
+        justify-content: center;
+      }
+
+      .header-left h1 {
+        font-size: 22px;
+      }
+
+      .header-left .title {
+        font-size: 13.5px;
+      }
+
+      .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .job-date {
+        margin-bottom: 2px;
+      }
+    }
   </style>
 </head>
 <body>
