@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Project Ideas — Anjali Agarwal</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 14px;
+      background: #f4f4f4;
+      color: #222;
+      padding: 32px 16px;
+    }
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 48px 52px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #111;
+      border-bottom: 3px solid #0071ce;
+      padding-bottom: 12px;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 36px;
+    }
+    .category {
+      margin-bottom: 36px;
+    }
+    .category-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0071ce;
+      margin-bottom: 14px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 16px 18px;
+      background: #fafafa;
+      position: relative;
+    }
+    .card:hover {
+      border-color: #0071ce;
+      background: #f0f7ff;
+    }
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 6px;
+    }
+    .card-desc {
+      font-size: 12.5px;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .tag {
+      background: #e8f0fe;
+      color: #0056a3;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 12px;
+    }
+    .tag.rust   { background: #fdf0e8; color: #b44000; }
+    .tag.ai     { background: #edf7ed; color: #1a7a1a; }
+    .tag.gql    { background: #f3e8fd; color: #6200b3; }
+    .tag.cli    { background: #fff3e0; color: #b36000; }
+    .badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      text-transform: uppercase;
+    }
+    .badge.quick  { background: #e8f5e9; color: #1b7a1b; }
+    .badge.medium { background: #fff8e1; color: #b36000; }
+    .badge.deep   { background: #fce4ec; color: #b0003a; }
+    .legend {
+      display: flex;
+      gap: 16px;
+      font-size: 11.5px;
+      margin-bottom: 28px;
+      color: #555;
+    }
+    .legend span { display: flex; align-items: center; gap: 5px; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .dot.q { background: #4caf50; }
+    .dot.m { background: #ff9800; }
+    .dot.d { background: #e91e63; }
+    .tip {
+      background: #f0f7ff;
+      border-left: 4px solid #0071ce;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13px;
+      color: #333;
+      margin-top: 32px;
+      line-height: 1.7;
+    }
+    .tip strong { color: #0071ce; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <h1>GitHub Project Ideas</h1>
+  <p class="subtitle">Tailored to your background: Rust · GraphQL · Distributed Systems · AI/MCP Tooling</p>
+
+  <div class="legend">
+    <span><span class="dot q"></span> Quick (1–2 days)</span>
+    <span><span class="dot m"></span> Medium (1 week)</span>
+    <span><span class="dot d"></span> Deep (2–4 weeks)</span>
+  </div>
+
+  <!-- AI / MCP -->
+  <div class="category">
+    <div class="category-title">AI / MCP Tooling — Hottest right now</div>
+    <div class="projects">
+
+      <div class="card">
+        <span class="badge quick">Quick</span>
+        <div class="card-title">Release Notes Generator (MCP)</div>
+        <div class="card-desc">MCP server that reads a GitHub PR diff and auto-generates release notes, risk flags, and a stakeholder sign-off summary using Claude/GPT. You literally built this at Walmart — just make a public version.</div>
+        <div class="tags">
+          <span class="tag ai">MCP</span>
+          <span class="tag ai">Claude API</span>
+          <span class="tag">TypeScript</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge quick">Quick</span>
+        <div class="card-title">PR Code Review MCP Tool</div>
+        <div class="card-desc">MCP server that fetches a GitHub PR diff and runs structured review layers — security, edge cases, parity checks. Returns actionable findings grouped by severity.</div>
+        <div class="tags">
+          <span class="tag ai">MCP</span>
+          <span class="tag ai">LLM</span>
+          <span class="tag">Python</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge medium">Medium</span>
+        <div class="card-title">Resume Analyzer + JD Gap Tool</div>
+        <div class="card-desc">Upload a resume PDF + job description, get back a gap analysis and tailored suggestions. Built with Claude API + MCP. Highly shareable and gets stars fast.</div>
+        <div class="tags">
+          <span class="tag ai">Claude API</span>
+          <span class="tag ai">MCP</span>
+          <span class="tag cli">CLI</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge medium">Medium</span>
+        <div class="card-title">Incident RCA Bot</div>
+        <div class="card-desc">Takes an error log dump + service name → produces a structured root cause analysis with OBSERVED / INFERRED labels. Useful for on-call engineers.</div>
+        <div class="tags">
+          <span class="tag ai">LLM</span>
+          <span class="tag ai">MCP</span>
+          <span class="tag">TypeScript</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Rust -->
+  <div class="category">
+    <div class="category-title">Rust — Your technical differentiator</div>
+    <div class="projects">
+
+      <div class="card">
+        <span class="badge quick">Quick</span>
+        <div class="card-title">JSON Response Differ (CLI)</div>
+        <div class="card-desc">CLI tool that takes two JSON responses and shows semantic diffs — ignoring key order, normalizing nulls, flagging type mismatches. Built in Rust. Exactly what you use for Node/Rust parity testing.</div>
+        <div class="tags">
+          <span class="tag rust">Rust</span>
+          <span class="tag cli">CLI</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge medium">Medium</span>
+        <div class="card-title">GraphQL Query Complexity Limiter</div>
+        <div class="card-desc">Rust library/middleware that scores GraphQL query complexity and rejects expensive queries before execution. Practical, few good Rust implementations exist.</div>
+        <div class="tags">
+          <span class="tag rust">Rust</span>
+          <span class="tag gql">GraphQL</span>
+          <span class="tag">Library</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge medium">Medium</span>
+        <div class="card-title">HTTP Latency Benchmarker</div>
+        <div class="card-desc">Rust CLI that sends concurrent requests to two endpoints and produces a detailed P50/P90/P99 latency comparison report. Great for measuring Node vs Rust performance.</div>
+        <div class="tags">
+          <span class="tag rust">Rust</span>
+          <span class="tag cli">CLI</span>
+          <span class="tag">Async</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge deep">Deep</span>
+        <div class="card-title">Node.js → Rust Migration Playbook</div>
+        <div class="card-desc">A real documented repo showing how to migrate a Node.js GraphQL resolver to Rust with before/after benchmarks, test strategy, and parity verification. This tells your whole Walmart story publicly.</div>
+        <div class="tags">
+          <span class="tag rust">Rust</span>
+          <span class="tag gql">GraphQL</span>
+          <span class="tag">Docs</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- GraphQL -->
+  <div class="category">
+    <div class="category-title">GraphQL / API Tools</div>
+    <div class="projects">
+
+      <div class="card">
+        <span class="badge quick">Quick</span>
+        <div class="card-title">GraphQL Schema Diff CLI</div>
+        <div class="card-desc">Compares two GraphQL schemas and outputs breaking vs non-breaking changes in a clean report. Used in CI pipelines. Very searchable on GitHub.</div>
+        <div class="tags">
+          <span class="tag gql">GraphQL</span>
+          <span class="tag cli">CLI</span>
+          <span class="tag">TypeScript</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="badge medium">Medium</span>
+        <div class="card-title">Federation Subgraph Parity Tester</div>
+        <div class="card-desc">Tool that runs the same GraphQL query against two subgraph implementations and compares responses field-by-field. Generalised version of what you built at Walmart.</div>
+        <div class="tags">
+          <span class="tag gql">GraphQL</span>
+          <span class="tag">Python</span>
+          <span class="tag">Testing</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="tip">
+    <strong>Where to start:</strong> Pick the <strong>Release Notes Generator MCP</strong> first — it's 1–2 days, you've already built a version of it, and MCP tools are getting massive attention right now. Star count will come fast. Then do the <strong>JSON Differ CLI in Rust</strong> as your second project — it proves Rust skills concretely.
+  </div>
+
+</div>
+</body>
+</html>
